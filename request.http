@@ -1,2 +1,15 @@
 ###
-GET http://localhost:3000/player_news_headlines.json 
+GET http://localhost:3000/player_news_headlines?first_name=Joe&last_name=Haden
+
+
+
+
+
+
+
+
+
+
+
+###
+GET http://localhost:3000/twitter_username_search_results.json

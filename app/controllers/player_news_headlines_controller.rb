@@ -6,15 +6,15 @@ class PlayerNewsHeadlinesController < ApplicationController
     # first_name = params[:first_name]
     # last_name = params[:last_name]
     # twitter_username = params[:twitter_username]
-    first_name = "Tom"
-    last_name = "Brady"
-    full_name = "#{first_name} - #{last_name}"
+    first_name = params[:first_name]
+    last_name = params[:last_name]
+    # full_name = "#{first_name} - #{last_name}"
 
     # from = Time.new - 1.day
     # till = Time.new
 
 
-    response = HTTP.get("https://newsapi.org/v2/everything?from=#{dy}&to=#{dt}&q=#{full_name}&sortBy=popularity&apiKey=#{Rails.application.credentials.newsapi}")
+    response = HTTP.get("https://newsapi.org/v2/everything?from=#{dy}&to=#{dt}&q=#{first_name}-#{last_name}&sortBy=popularity&apiKey=#{Rails.application.credentials.newsapi}")
     render json: response.parse
 
 
