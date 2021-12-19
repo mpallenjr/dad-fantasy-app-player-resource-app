@@ -1,8 +1,22 @@
 class PlayerNewsHeadlinesController < ApplicationController
   def index
-    response = HTTP.get("https://newsapi.org/v2/everything?from=2021-12-18&to=2021-12-19&q=Tom-Brady&sortBy=popularity&apiKey=#{Rails.application.credentials.newsapi}")
+    dt = Date.parse(Date.today.to_s)
+    dy = Date.parse(Date.yesterday.to_s)
+    # d.strftime('%Y %b %d')
+    # first_name = params[:first_name]
+    # last_name = params[:last_name]
+    # twitter_username = params[:twitter_username]
+    first_name = "Tom"
+    last_name = "Brady"
+    full_name = "#{first_name} - #{last_name}"
+
+    # from = Time.new - 1.day
+    # till = Time.new
+
+
+    response = HTTP.get("https://newsapi.org/v2/everything?from=#{dy}&to=#{dt}&q=#{full_name}&sortBy=popularity&apiKey=#{Rails.application.credentials.newsapi}")
     render json: response.parse
 
-    
+
   end
 end
