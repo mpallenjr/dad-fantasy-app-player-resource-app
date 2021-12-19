@@ -1,0 +1,2 @@
+class PlayerTwitterMentionsController < ApplicationController
+end

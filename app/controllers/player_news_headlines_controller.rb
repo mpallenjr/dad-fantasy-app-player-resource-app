@@ -1,0 +1,2 @@
+class PlayerNewsHeadlinesController < ApplicationController
+end

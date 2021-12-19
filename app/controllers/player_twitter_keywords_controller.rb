@@ -1,0 +1,2 @@
+class PlayerTwitterKeywordsController < ApplicationController
+end

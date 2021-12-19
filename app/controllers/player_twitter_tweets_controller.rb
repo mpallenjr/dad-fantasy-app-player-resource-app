@@ -1,0 +1,2 @@
+class PlayerTwitterTweetsController < ApplicationController
+end
