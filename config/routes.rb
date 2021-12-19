@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   
   get "twitter_username_search_results" => "twitter_username_search_results#index"
 
+  get "player_twitter_keywords" => "player_twitter_keywords#index"
+
 
 end

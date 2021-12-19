@@ -3,7 +3,8 @@ GET http://localhost:3000/player_news_headlines?first_name=Joe&last_name=Haden
 
 
 
-
+###
+GET http://localhost:3000/player_twitter_keywords?first_name=Tom&last_name=Brady
 
 
 
