@@ -1,5 +1,8 @@
 class PlayerNewsHeadlinesController < ApplicationController
   def index
+
+    #Pulls headlines for a specific person based on first and last name.  Should look for articles specifically within the last 24 hours.  Will list in order of 'popularity'.
+    
     dt = Date.parse(Date.today.to_s)
     dy = Date.parse(Date.yesterday.to_s)
  
